@@ -1,0 +1,351 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jul 22 16:24:02 2025
+# Process ID: 18416
+# Current directory: C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/synth_1
+# Command line: vivado.exe -log OV7670_VGA_Driver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OV7670_VGA_Driver.tcl
+# Log file: C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/synth_1/OV7670_VGA_Driver.vds
+# Journal file: C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source OV7670_VGA_Driver.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top OV7670_VGA_Driver -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18000
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'OV7670_VGA_Driver' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/OV7670_VGA_Display.sv:3]
+	Parameter v_counter_preload bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SCCB_Master' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'OV7670_set' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:257]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_set' (1#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:257]
+INFO: [Synth 8-6157] synthesizing module 'SCCB_controller' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:33]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:158]
+INFO: [Synth 8-6155] done synthesizing module 'SCCB_controller' (2#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'SCCB_Master' (3#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/SCCB_Master.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'pixel_clk_gen' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:74]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_clk_gen' (4#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:74]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Controller' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:3]
+	Parameter v_counter_preload bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vga_Decoder' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:33]
+	Parameter v_counter_preload bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_counter' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:97]
+	Parameter H_MAX bound to: 800 - type: integer 
+	Parameter V_MAX bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_counter' (5#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:97]
+INFO: [Synth 8-6157] synthesizing module 'vga_decoder' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:134]
+	Parameter v_counter_preload bound to: 0 - type: integer 
+	Parameter H_Visible_area bound to: 640 - type: integer 
+	Parameter H_Front_porch bound to: 16 - type: integer 
+	Parameter H_Sync_pulse bound to: 96 - type: integer 
+	Parameter H_Back_porch bound to: 48 - type: integer 
+	Parameter H_Whole_line bound to: 800 - type: integer 
+	Parameter V_Visible_area bound to: 480 - type: integer 
+	Parameter V_Front_porch bound to: 10 - type: integer 
+	Parameter V_Sync_pulse bound to: 2 - type: integer 
+	Parameter V_Back_porch bound to: 33 - type: integer 
+	Parameter V_Whole_frame bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_decoder' (6#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:134]
+INFO: [Synth 8-6155] done synthesizing module 'vga_Decoder' (7#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Controller' (8#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/imports/new/VGA_Controller.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'QVGA_Memcontroller' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/QVGA_Memcontroller.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'QVGA_Memcontroller' (9#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/QVGA_Memcontroller.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/frame_buffer.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (10#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/frame_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'OV7670_MemController' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/OV7670_MemController.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_MemController' (11#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/OV7670_MemController.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'pipeline_register_s0_s1' [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/pipeline_register.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_register_s0_s1' (12#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/pipeline_register.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_VGA_Driver' (13#1) [C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1/new/OV7670_VGA_Display.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	            1200K Bit	(76800 X 16 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 2     
+	  11 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 1     
+	  11 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  11 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	  12 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 9     
+	  11 Input    1 Bit        Muxes := 14    
+	  13 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------------+-------------------------------------+---------------+----------------+
+|Module Name       | RTL Object                          | Depth x Width | Implemented As | 
++------------------+-------------------------------------+---------------+----------------+
+|OV7670_VGA_Driver | U_SCCB_Master/U_OV7670_set/dout_reg | 256x16        | Block RAM      | 
++------------------+-------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|OV7670_VGA_Driver | U_frame_buffer/mem_reg | 75 K x 16(NO_CHANGE)   | W |   | 75 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|OV7670_VGA_Driver | U_frame_buffer/mem_reg | 75 K x 16(NO_CHANGE)   | W |   | 75 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------------+------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_5__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_6__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_11__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_12__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_13__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_14__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_frame_buffer/mem_reg_1_15__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U_SCCB_Master/U_OV7670_set/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     4|
+|2     |CARRY4   |    12|
+|3     |LUT1     |     7|
+|4     |LUT2     |    58|
+|5     |LUT3     |    52|
+|6     |LUT4     |    35|
+|7     |LUT5     |    50|
+|8     |LUT6     |    73|
+|9     |RAMB18E1 |     1|
+|10    |RAMB36E1 |    48|
+|11    |FDCE     |   149|
+|12    |FDPE     |     1|
+|13    |FDRE     |    25|
+|14    |IBUF     |    13|
+|15    |OBUF     |    42|
+|16    |OBUFT    |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------------+------------------------+------+
+|      |Instance                    |Module                  |Cells |
++------+----------------------------+------------------------+------+
+|1     |top                         |                        |   571|
+|2     |  U_QVGA_Memcontroller      |QVGA_Memcontroller      |    12|
+|3     |  U_OV7670_Clk_Gen          |pixel_clk_gen           |     8|
+|4     |  U_OV7670_MemController    |OV7670_MemController    |   115|
+|5     |  U_SCCB_Master             |SCCB_Master             |   180|
+|6     |    U_OV7670_set            |OV7670_set              |     3|
+|7     |    U_SCCB_controller       |SCCB_controller         |   177|
+|8     |  U_VGA_Controller          |VGA_Controller          |   106|
+|9     |    U_VGA_DEC               |vga_Decoder             |   106|
+|10    |      U_Pix_Clk_Gen         |pixel_clk_gen_0         |     8|
+|11    |      U_Pix_Counter         |pixel_counter           |    98|
+|12    |  U_frame_buffer            |frame_buffer            |    67|
+|13    |  U_pipeline_register_s0_s1 |pipeline_register_s0_s1 |    23|
++------+----------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.543 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1105.543 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1127.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1127.625 ; gain = 22.082
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/synth_1/OV7670_VGA_Driver.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file OV7670_VGA_Driver_utilization_synth.rpt -pb OV7670_VGA_Driver_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 22 16:24:20 2025...

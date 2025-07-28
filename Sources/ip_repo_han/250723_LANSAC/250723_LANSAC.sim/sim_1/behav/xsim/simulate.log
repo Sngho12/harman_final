@@ -1,0 +1,10 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+=== LANSAC DONE ===
+A11: 1024
+A12: 0
+DX : -1024
+A21: 0
+A22: 1024
+DY : 0
+$stop called at time : 200495 ns : File "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sim_1/new/tb_LANSAC.sv" Line 160

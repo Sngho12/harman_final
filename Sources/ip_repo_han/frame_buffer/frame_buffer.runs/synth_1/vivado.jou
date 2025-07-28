@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jul 25 11:00:22 2025
+# Process ID: 91924
+# Current directory: C:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.runs/synth_1
+# Command line: vivado.exe -log xy_frame_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xy_frame_buffer.tcl
+# Log file: C:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.runs/synth_1/xy_frame_buffer.vds
+# Journal file: C:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source xy_frame_buffer.tcl -notrace

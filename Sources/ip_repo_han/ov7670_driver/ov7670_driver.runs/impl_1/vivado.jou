@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jul 22 16:24:27 2025
+# Process ID: 21204
+# Current directory: C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/impl_1
+# Command line: vivado.exe -log OV7670_VGA_Driver.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OV7670_VGA_Driver.tcl -notrace
+# Log file: C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/impl_1/OV7670_VGA_Driver.vdi
+# Journal file: C:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source OV7670_VGA_Driver.tcl -notrace

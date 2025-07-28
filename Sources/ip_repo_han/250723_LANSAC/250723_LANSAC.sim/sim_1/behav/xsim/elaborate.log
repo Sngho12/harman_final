@@ -1,0 +1,41 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 957e83abfc964a2c9fec4a9bf155058f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_LANSAC_behav xil_defaultlib.tb_LANSAC xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 12 for port 'affine_matrix_a12' [C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sim_1/new/tb_LANSAC.sv:59]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 18 for port 'affine_matrix_dx' [C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sim_1/new/tb_LANSAC.sv:60]
+WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 12 for port 'affine_matrix_a21' [C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sim_1/new/tb_LANSAC.sv:61]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 18 for port 'affine_matrix_dy' [C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sim_1/new/tb_LANSAC.sv:63]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 1. Module LANSAC doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 317. Module pseudo_random0 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 330. Module pseudo_random1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 343. Module pseudo_random2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 384. Module compute_affine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 1. Module LANSAC doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 317. Module pseudo_random0 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 330. Module pseudo_random1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 343. Module pseudo_random2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 384. Module compute_affine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new/LANSAC.sv" Line 356. Module ram(DATA_SIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pseudo_random0
+Compiling module xil_defaultlib.pseudo_random1
+Compiling module xil_defaultlib.pseudo_random2
+Compiling module xil_defaultlib.compute_affine
+Compiling module xil_defaultlib.ram(DATA_SIZE=10)
+Compiling module xil_defaultlib.LANSAC
+Compiling module xil_defaultlib.tb_LANSAC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_LANSAC_behav

@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jul 23 09:58:58 2025
+# Process ID: 13448
+# Current directory: C:/Users/kccistc/Desktop/ip_repo/Hamming
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24536 C:\Users\kccistc\Desktop\ip_repo\Hamming\Hamming.xpr
+# Log file: C:/Users/kccistc/Desktop/ip_repo/Hamming/vivado.log
+# Journal file: C:/Users/kccistc/Desktop/ip_repo/Hamming\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kccistc/Desktop/ip_repo/Hamming/Hamming.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/kccistc/Desktop/Hamming' since last save.
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/kccistc/Desktop/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'; using path 'C:/Users/kccistc/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store' instead.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/kccistc/Desktop/ip_repo/Hamming/Hamming.gen/sources_1', nor could it be found using path 'C:/Users/kccistc/Desktop/Hamming/Hamming.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1104.496 ; gain = 0.000
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir c:/users/kccistc/desktop/ip_repo/hamming/hamming.srcs/sources_1/imports/new -vendor xilinx.com -library user -taxonomy /UserIP
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'forward_matching_ram' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'forward_matching_ram' has a dependency on the module local parameter or undefined parameter 'WEIGHT_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'backward_matching_ram' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'backward_matching_ram' has a dependency on the module local parameter or undefined parameter 'WEIGHT_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_forward_matching_ram' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_forward_matching_ram' has a dependency on the module local parameter or undefined parameter 'WEIGHT_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_backward_matching_ram' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_backward_matching_ram' has a dependency on the module local parameter or undefined parameter 'WEIGHT_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'local_forward_matching_ram' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'local_forward_matching_ram' has a dependency on the module local parameter or undefined parameter 'WEIGHT_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'local_backward_matching_ram' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'local_backward_matching_ram' has a dependency on the module local parameter or undefined parameter 'WEIGHT_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'index_count' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'prev_index_count' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'storage_count' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'fwd_idx' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bwd_idx' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'copy_idx' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'current_i' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'current_f' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'current_b' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_index_count' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_prev_index_count' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_storage_count' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_fwd_idx' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_bwd_idx' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'next_copy_idx' has a dependency on the module local parameter or undefined parameter 'ADDR_WIDTH'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:ceil(spirit:log(2,spirit:decode(id('MODELPARAM_VALUE.HORIZEN')))) - 1)" into user parameter "X_WIDTH".
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:ceil(spirit:log(2,spirit:decode(id('MODELPARAM_VALUE.VERTICAL')))) - 1)" into user parameter "Y_WIDTH".
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  c:/users/kccistc/desktop/ip_repo/hamming/hamming.srcs/sources_1/imports/new [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/users/kccistc/desktop/ip_repo/hamming/hamming.srcs/sources_1/imports/new'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 23 09:59:39 2025...

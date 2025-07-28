@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>xy_frame_buffer</spirit:name>
+  <spirit:version>1.1</spirit:version>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>xy_frame_buffer</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>382eb78c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>xy_frame_buffer</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>382eb78c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>wclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>we</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>x_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>y_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>modified_x_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>modified_y_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>wData</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>oe</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rData</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xy_frame_buffer.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_382eb78c</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xy_frame_buffer.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/xy_frame_buffer_v1_1.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>xy_frame_buffer_v1_1</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">xy_frame_buffer_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>xy_frame_buffer_v1_1</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:xy_frame_buffer:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2025-07-27T04:24:09Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb8cb66_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe85fd2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ea56e9_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b234c1b_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d4bd186_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b93cf8f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d5f49b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c2d8613_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68cabd9c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a93470e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c821b6_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c25603e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51ecbd76_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d915294_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74ac3610_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@510e733f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@475818bf_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7823db5d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fcac53b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86c213f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ab30f3a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@554e4be4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fb2ac5b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c3305a7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56e9a9e4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@740e10de_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@175591f1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d7cd0cf_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a07c7a5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@353c7568_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3454ade2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1faf5f33_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@778b0798_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@320dc33d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fdb802e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32305ab_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6acf3993_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bd90089_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@228ea676_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d8fa_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c33ac78_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d043357_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5be387fd_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75f89f95_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6384e0a1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@587d32dc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37db2581_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@240ada91_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222ed9fb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ebc2f8c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2856bfee_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3949da6b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32256375_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ccc9e08_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c53fab9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a68bda_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e4c1b1f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248d8b9d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@496ab106_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344cee2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d0a517e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79fdd70b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f49f4c1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d825a61_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a28c490_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3382f3d7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@465f65ce_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f00bc74_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e91468_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ce80bfa_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@325bd8b8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a00cf14_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d6484f8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25e64f1a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2995769d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61f63983_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41e822ca_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68be29e7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a71b192_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@454dced5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1944994c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d00c79_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fc2579d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c5f0193_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f024a4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52e77a1f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dee272d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a1c9027_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f33887_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52c716c4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d04077_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/frame_buffer/frame_buffer.srcs/sources_1/new</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7d081fe2"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="9289627b"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b0df26ec"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>OV7670_VGA_Driver</spirit:name>
+  <spirit:version>1.1</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>reset</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">reset</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>OV7670_VGA_Driver</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>336bd76c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>OV7670_VGA_Driver</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>336bd76c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>a55cb699</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ov7670_xclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ov7670_pclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ov7670_href</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ov7670_v_sync</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ov7670_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>h_sync</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>v_sync</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DE</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>x_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>y_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>red_port</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>green_port</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">5</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>blue_port</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">4</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sda</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>scl</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>v_counter_preload</spirit:name>
+        <spirit:displayName>V Counter Preload</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.v_counter_preload">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>mode</spirit:name>
+        <spirit:displayName>Mode</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.mode">NORMAL</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_d23630de</spirit:name>
+      <spirit:enumeration>NORMAL</spirit:enumeration>
+      <spirit:enumeration>VFLIP</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>new/OV7670_MemController.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/QVGA_Memcontroller.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/SCCB_Master.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>imports/new/VGA_Controller.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/frame_buffer.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/pipeline_register.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/OV7670_VGA_Display.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_76228d63</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>new/OV7670_MemController.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/QVGA_Memcontroller.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/SCCB_Master.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>imports/new/VGA_Controller.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/frame_buffer.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/pipeline_register.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>new/OV7670_VGA_Display.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/OV7670_VGA_Driver_v1_1.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_a55cb699</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>OV7670_VGA_Driver_v1_1</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>v_counter_preload</spirit:name>
+      <spirit:displayName>V Counter Preload</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.v_counter_preload">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">OV7670_VGA_Driver_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>mode</spirit:name>
+      <spirit:displayName>Mode</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.mode" spirit:choiceRef="choice_list_d23630de">NORMAL</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>OV7670_VGA_Driver_v1_1</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:OV7670_VGA_Driver:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2025-07-25T02:01:54Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a6a7680_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c5464a2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7557784a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a434bf0_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e13a2af_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ab093dd_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebd483b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b860095_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ccddbde_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31b0e92b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66865a09_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@392b7047_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1beb6740_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54d0a7af_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b302a55_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f995f31_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35c95819_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eb09098_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bd06c41_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a3fa88f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f6c5ca9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4239a3ce_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d4f8327_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47eacc3a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d54c659_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ed8a341_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48463467_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1a6796_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b77cfa_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@291bb674_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c62a4c8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b1f2402_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5402a5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c806962_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158e7fc4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c500270_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b90b805_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6364325f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@249d3562_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e3554b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ab4d22_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b097cae_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c4b038_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ebf395_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10f1740b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59702600_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27c30389_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f87e3bd_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25401e2b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28d37ade_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a1081c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645e6883_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e5a50b7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@779f7555_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f3ed00d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7af62f64_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5586b072_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a99c27_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cf6574c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e29ab7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da39e90_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6154d741_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/ov7670_driver/ov7670_driver.srcs/sources_1/imports/sources_1</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6bf65d32"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="2378aa10"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e74c22c2"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="38a4c8a9"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

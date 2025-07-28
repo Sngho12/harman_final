@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>LANSAC</spirit:name>
+  <spirit:version>3.8</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>reset</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">reset</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>LANSAC</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>fcb3fb46</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>LANSAC</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>fcb3fb46</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>438a85cb</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>tb_LANSAC</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>6d5e9046</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>x_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.X_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>y_pixel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.Y_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>current_feature_X</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.X_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>current_feature_Y</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.Y_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>prev_feature_X</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.X_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>prev_feature_Y</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.Y_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pair_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pair_done</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>affine_matrix_dx</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">17</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>affine_matrix_dy</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">17</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>lansac_done</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>X_WIDTH</spirit:name>
+        <spirit:displayName>X Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.X_WIDTH">10</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>Y_WIDTH</spirit:name>
+        <spirit:displayName>Y Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Y_WIDTH">10</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>ADJUST_AFFINE_DX_THRES</spirit:name>
+        <spirit:displayName>Adjust Affine Dx Thres</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ADJUST_AFFINE_DX_THRES">30</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>ADJUST_AFFINE_DY_THRES</spirit:name>
+        <spirit:displayName>Adjust Affine Dy Thres</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ADJUST_AFFINE_DY_THRES">30</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>MAXIMUM_PAIR_NUM</spirit:name>
+        <spirit:displayName>Maximum Pair Num</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAXIMUM_PAIR_NUM">100</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>MINIMUM_PAIR_NUM</spirit:name>
+        <spirit:displayName>Minimum Pair Num</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MINIMUM_PAIR_NUM">6</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>LANSAC.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_fcb3fb46</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>LANSAC.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/LANSAC_v3_8.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_438a85cb</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../sim_1/new/tb_LANSAC.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>LANSAC_v3_8</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>X_WIDTH</spirit:name>
+      <spirit:displayName>X Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.X_WIDTH">10</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Y_WIDTH</spirit:name>
+      <spirit:displayName>Y Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Y_WIDTH">10</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>ADJUST_AFFINE_DX_THRES</spirit:name>
+      <spirit:displayName>Adjust Affine Dx Thres</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADJUST_AFFINE_DX_THRES">30</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>ADJUST_AFFINE_DY_THRES</spirit:name>
+      <spirit:displayName>Adjust Affine Dy Thres</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADJUST_AFFINE_DY_THRES">30</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>MAXIMUM_PAIR_NUM</spirit:name>
+      <spirit:displayName>Maximum Pair Num</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAXIMUM_PAIR_NUM">100</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">LANSAC_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>MINIMUM_PAIR_NUM</spirit:name>
+      <spirit:displayName>Minimum Pair Num</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MINIMUM_PAIR_NUM">6</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>LANSAC_v3_8</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:1.1</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:1.2</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:1.3</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:2.3</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:2.4</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:3.4</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:3.5</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:3.6</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:LANSAC:3.7</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2025-07-27T12:11:17Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5845e7c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bd1894e_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7959c33a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48cad9ba_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72e1b8df_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7250476f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@149c5a4_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1974908a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26e49b95_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd557be_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e4ccc8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb227f6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5110f553_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b97f93b_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c7c02c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c903c16_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c77670_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bdd7c8c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59bbcc90_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@318fc9ac_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f418d52_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a264cf3_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@524c5e3c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d0567d2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67dc1919_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39381265_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f0cb9d_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@681c13b8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24243153_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8f3d74_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5144af0d_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f2374ab_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b91c04_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677fcf65_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@479ef8b6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13abc6f6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@183f6374_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@786b48f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7f9a91_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e012ff6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53274b4c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b23912f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a8baba1_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4911df99_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c435b6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10bfda89_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@593dda9_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c0ab525_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b37f0d8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7261f59f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10baec80_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55f85a10_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5baa376a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77c8d04d_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d1602f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d785232_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63d5caf_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c257322_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e3335fb_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5611a9_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a059ae_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60edbed6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c38ca25_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a0774e7_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1532c9fd_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@af1479a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a52d6d3_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c434e3a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12ef30e6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb8a675_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@589d4544_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f73e26c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49ac1f9a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1649703e_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d572f9b_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@159c9ecc_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f33884c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@527e232a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f5adfe7_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8305120_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b1b9a9_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4adcdfb8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@263750e8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b989672_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b2369d1_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e3942ff_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@391f7b3f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21d89c31_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@230931b_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc0c370_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60718ebc_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f2d53e_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d37e546_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@463136bd_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ffc9111_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a91d0e5_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b5d2586_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@720d4233_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a7e6133_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5697c6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@713004d2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8adfc02_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c22a50c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2acc7002_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c9746d2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bcf1e41_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b8d28ba_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d706d59_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6145d0d8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d144ac0_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e900e48_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59f9baec_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@379bac52_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6866b765_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a2e5f94_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3058d3e8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c7fa833_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2caf16f5_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e05f1d3_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce4f327_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17373a44_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ddb3b49_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3dd581_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@769ac7ae_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ecce2c3_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de97b26_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5798ed09_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44a9dff2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@673962c6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2afb713d_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e8a5e2c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f1fd5bc_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@372e16f6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36f7461d_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@778a3703_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a7bf48c_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15972462_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dbb4722_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76841433_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59cb7074_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6afcb8_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@160e7327_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b6042af_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@273ae024_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77085914_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6efff6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fa90f36_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b6100cc_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a99c9ba_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4541f423_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@374f7a26_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d3b8c3_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d04ec19_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72096283_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23a36fdb_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10d8c76a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@794d336b_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e37aca7_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e5ac873_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b02a97a_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f0f7961_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e0bb0a4_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d629e65_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385e5c4f_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be979a2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f14d825_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1858aac3_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c92fab6_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/250723_lansac/250723_lansac.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68cdddc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72d2f917_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f9c0d7f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c585a29_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fac880c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5075b1e2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ad3c8a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64eef8e9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f71b3d2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6df4d96c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3aaf3474_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@574e5778_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@758df56d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c2f1486_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67a6ca0e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4915dfb4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4927f7c5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3008aa49_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f668c50_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37407519_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc5cd6a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f7843c4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35dc795a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43469198_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354dd627_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3522433d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e0b4bc4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3595abd2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6449efb0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d350ca6_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dc7b4e8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73ab6bb1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22362a51_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dbbbde4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b59787a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be9309b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e3b5bb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34c25921_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f0b0f13_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25cdb293_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@166d2f9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@112438da_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11b8633d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f10f19_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3523839e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c03319d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1651e34b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@726b3114_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627a55ab_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e6620b5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ded73f1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ee0ce09_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b6ee2b8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47b144d2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@237974c4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@109b6e46_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f3164d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41826b10_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75164002_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14ddc05a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34381fd8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fad3f5c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af1c7d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cd311fb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2147df37_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1678ad4b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17cc7328_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d55ab46_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57f22e12_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@786ead90_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@588f0316_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41dab63d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6444020c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e852c60_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26378be1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44cb9a56_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ccb067b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40696710_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f17271c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@507f0806_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63e11014_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe1fd6d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2074df_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73939e1e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32a23eb3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59dbf60c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6838a8c0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b186c31_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ebbbefe_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71048654_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216bc07d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b744136_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d1455e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689fc4ff_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3739d73_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fee8d87_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49466e34_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15120f7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@165e216e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@445013e1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d73eb1c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cc1835b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f8a659_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d192e2c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1365d991_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@289b9750_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a3db865_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@611f4421_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@668e4afc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4554898_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dcf62ef_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10374de0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50fe0eef_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@515599a3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a09e91e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e891499_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7102bf_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ae375d8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23e03b2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a132e06_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@533d66e9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c1da56_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eeb12d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ecfdf64_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@180b12b9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf2b804_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25d8366e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1415a0b7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@638a9776_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c61e381_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59473b60_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf421bd_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68cf9bf1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b7755cb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7679d46e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43672847_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da976d3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d4a1a66_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc3875e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf573be_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bd485fe_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60205bb4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ccbb640_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6deb782a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c200c3e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4658d224_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c0f7c5d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@199bbfd7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78e736fe_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3aa280b4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61a9c18_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36276e9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bb8c65b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e754e68_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5298ce69_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf7fce_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ff54955_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d9f246b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1171feaa_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@329533c5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29373e5c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394dffa9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b50a118_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12331b9e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc86d59_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3197182f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4143506d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528465a2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@601f19cc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ebd44b3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1191afab_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2de62323_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e54917_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c652b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc9a518_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad57351_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ba1aab7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@769cb83d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29525198_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77b4e4db_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f5aa293_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@406e286d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a945bcf_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b10a209_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2df4b732_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e978b0c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@673d96e9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65260fb4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5764b336_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ab761a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42e1ec1a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64fbaf27_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@698c1d4d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57dba00e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48e06c89_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65b38b73_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31bae768_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ab1827_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dba0400_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b390d6b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1331274f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c75054c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@610280c2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3588edc3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3ece9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fbce6f7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@146ce278_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1187b902_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b611e1d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42401793_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@258490c9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6edab3ce_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a663297_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e29fe67_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bb35f85_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c54df5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@710ada8a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5029c414_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b0ab4f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f9521a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7363f16_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d0fef78_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef8a277_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140e0712_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67837a3f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4439e6bb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cca7ade_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bcd4d82_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747e2aa3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@701409e0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79ca6e2c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c62d59_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d53025a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a56f09c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b6e8077_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba9ad66_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7138471d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fbf9d52_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40c41b6c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e5a7154_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6b1d1f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e829cc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b13e533_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79961b25_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@515f76d3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc30496_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13da1e2a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5582241_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@426b33d9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48513683_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5043c01f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc76fe3_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19fe1621_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b83543f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@321565b8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35c307a1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11f3fd21_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41df37a0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bf9042e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@577c29b4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f8b7041_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dbe4c97_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f7b28ed_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42495bc4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62db59fc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5caaa64d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5559eac9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b24309c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be3c55d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c6e3ed4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c0e3ba_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61bbc473_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ab55d83_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189214cb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@557f0a49_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ed431bc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@213073a9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45cc764c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@766dbfc4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563913d4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a6a941_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ded481_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aa76e86_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@125464c0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e22e1cb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@150971ee_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d61adba_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ace305d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1421ccd9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1685302a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ce13e2d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a8245e2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@744046d4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8365ea8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6420f4ce_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b7e4a9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@120019c7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6c8e87_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c75d2a0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10175ded_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@651cfd05_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f349931_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a2b8154_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e4bac33_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce2ad25_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5216068c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3061197e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@545fc7d9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eae5d61_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e7fa6e8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49a21a7b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c18a307_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@280df9a8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62580c7f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65a67fde_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19ed9253_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f50711c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d9a3b4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f18136_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e35c49c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f82def8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361f0e41_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@472bf799_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f09f5e1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229e1c2e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ee19f63_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61340092_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38dce404_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33677a81_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f462560_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40d1ab60_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3766a3ab_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30088ac0_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2933311e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f391ec_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e046464_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4009717_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a75803_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/250723_LANSAC/250723_LANSAC.srcs/sources_1/new</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="667e16b0"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4c79c7a5"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="dced7153"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="bbe8718f"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
