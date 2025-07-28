@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf8e7de4</spirit:value>
+            <spirit:value>502092ba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf8e7de4</spirit:value>
+            <spirit:value>502092ba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -295,7 +295,7 @@
       <spirit:file>
         <spirit:name>address_generator.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_bf8e7de4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_502092ba</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -393,13 +393,13 @@
       </xilinx:taxonomies>
       <xilinx:displayName>affine_address_modifier_v1_3</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:affine_address_modifier:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>xilinx.com:user:affine_address_modifier:1.1</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>xilinx.com:user:affine_address_modifier:1.2</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2025-07-27T04:26:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-07-28T01:17:11Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3e759639_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@34eb17d2_ARCHIVE_LOCATION">c:/fpga_harman/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
@@ -576,12 +576,80 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5c08db4e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@16910229_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@52a802d8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5395a922_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59863b2e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@242778e4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e394952_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6651c399_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a332a62_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@136f7114_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f702d4e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7363443_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33cd5d41_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f1d59a7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f85adf2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d47a440_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f88def_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@246b49cc_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@770b87ec_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38acdb80_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65893730_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2795796b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25a11e42_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34dd1c02_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5271eeef_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48b6acae_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe4af2e_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a47ea18_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e6c87fb_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51e62323_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@153e506d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6283ed1c_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4acc25a8_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48dd7689_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45465e2_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d1e1812_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc58160_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@180d2c2a_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7342a8b6_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118b59e5_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a96a769_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e314644_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66814743_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@185f0df_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@543b90d9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a64fbe_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aae9063_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@324e38a1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7686a655_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57001cd9_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64898739_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@286ab96_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3770efd_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@273736e1_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11f48dea_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@149a5f60_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d6f3777_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db80198_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64412e84_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5579ceaa_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11cd2de_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b8e8936_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e3c36ce_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2034e4a7_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78def83d_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23a1e9f4_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1306d580_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a763b21_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e45b21b_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a85a446_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2747436f_ARCHIVE_LOCATION">c:/FPGA_HARMAN/ip_repo/20250724_address_generator/20250724_address_generator.srcs/sources_1/new</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f15caf20"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a02d2ee5"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b2ac5e1c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="7f454bf8"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="38f20d58"/>

@@ -42,8 +42,8 @@ module affine_address_modifier #(
     logic signed [23:0] pre_acc_affine_matrix_a22_reg;
     logic signed [35:0] pre_acc_affine_matrix_dy_reg;
 
-    logic signed [ADDRESS_SIZE_X:0] s_x_pixel;
-    logic signed [ADDRESS_SIZE_Y:0] s_y_pixel;
+    logic signed [ADDRESS_SIZE_X*2:0] s_x_pixel;
+    logic signed [ADDRESS_SIZE_Y*2:0] s_y_pixel;
     logic signed [ADDRESS_SIZE_X*2:0] compute_x_pixel;
     logic signed [ADDRESS_SIZE_Y*2:0] compute_y_pixel;
 
@@ -104,8 +104,8 @@ module affine_address_modifier #(
         // 역변환
         // compute_x_pixel= ((inv_a11 * (x_pixel * 1024 - (acc_affine_matrix_dx_reg >>> 10))) + (inv_a12 * (y_pixel * 1024 - (acc_affine_matrix_dy_reg >>> 10))) )>>>20;
         // compute_y_pixel= ((inv_a21 * (x_pixel * 1024 - (acc_affine_matrix_dx_reg >>> 10))) + (inv_a22 * (y_pixel * 1024 - (acc_affine_matrix_dy_reg >>> 10))) )>>>20;
-        compute_x_pixel= ((s_x_pixel<<<10)-acc_affine_matrix_dx_reg)>>>10;
-        compute_y_pixel= ((s_y_pixel<<<10)-acc_affine_matrix_dy_reg)>>>10;
+        compute_x_pixel= ((s_x_pixel<<<10) + acc_affine_matrix_dx_reg)>>>10;
+        compute_y_pixel= ((s_y_pixel<<<10) + acc_affine_matrix_dy_reg)>>>10;
         if(  (compute_x_pixel > LINE_LENGHT-1) | (compute_x_pixel < 0) |(compute_y_pixel > FRAME_HEIGHT-1) |(compute_y_pixel < 0)) begin
             modified_x_pixel = 0;
             modified_y_pixel = 0;
@@ -167,9 +167,9 @@ module affine_address_modifier #(
             end else if (pre_acc_affine_matrix_dx_reg > (1024*ACCUMUL_AFFINE_X_THRES)) begin
                 acc_affine_matrix_dx_next = 1024 * ACCUMUL_AFFINE_X_THRES;
             end else if (pre_acc_affine_matrix_dx_reg < 0) begin
-                acc_affine_matrix_dx_next = pre_acc_affine_matrix_dx_reg; //+ ((-pre_acc_affine_matrix_dx_reg + (1<<(10-TRANSLATION_X_RESILIENCE)))>>>(10-TRANSLATION_X_RESILIENCE));
+                acc_affine_matrix_dx_next = pre_acc_affine_matrix_dx_reg+ ((-pre_acc_affine_matrix_dx_reg + (1<<(10-TRANSLATION_X_RESILIENCE)))>>>(10-TRANSLATION_X_RESILIENCE));
             end else begin
-                acc_affine_matrix_dx_next = pre_acc_affine_matrix_dx_reg; //- ((pre_acc_affine_matrix_dx_reg + (1<<(10-TRANSLATION_X_RESILIENCE)))>>>(10-TRANSLATION_X_RESILIENCE));
+                acc_affine_matrix_dx_next = pre_acc_affine_matrix_dx_reg- ((pre_acc_affine_matrix_dx_reg + (1<<(10-TRANSLATION_X_RESILIENCE)))>>>(10-TRANSLATION_X_RESILIENCE));
             end
 
             if (pre_acc_affine_matrix_dy_reg < (-1024*ACCUMUL_AFFINE_Y_THRES)) begin
@@ -177,9 +177,9 @@ module affine_address_modifier #(
             end else if (pre_acc_affine_matrix_dy_reg > (1024*ACCUMUL_AFFINE_Y_THRES)) begin
                 acc_affine_matrix_dy_next = 1024 * ACCUMUL_AFFINE_Y_THRES;
             end else if (pre_acc_affine_matrix_dy_reg < 0) begin
-                acc_affine_matrix_dy_next = pre_acc_affine_matrix_dy_reg; //+ ((-pre_acc_affine_matrix_dy_reg + (1<<(10-TRANSLATION_Y_RESILIENCE)))>>>(10-TRANSLATION_Y_RESILIENCE));
+                acc_affine_matrix_dy_next = pre_acc_affine_matrix_dy_reg + ((-pre_acc_affine_matrix_dy_reg + (1<<(10-TRANSLATION_Y_RESILIENCE)))>>>(10-TRANSLATION_Y_RESILIENCE));
             end else begin
-                acc_affine_matrix_dy_next = pre_acc_affine_matrix_dy_reg; //- ((pre_acc_affine_matrix_dy_reg + (1<<(10-TRANSLATION_Y_RESILIENCE)))>>>(10-TRANSLATION_Y_RESILIENCE));
+                acc_affine_matrix_dy_next = pre_acc_affine_matrix_dy_reg - ((pre_acc_affine_matrix_dy_reg + (1<<(10-TRANSLATION_Y_RESILIENCE)))>>>(10-TRANSLATION_Y_RESILIENCE));
             end
         end
     end

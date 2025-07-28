@@ -7,7 +7,6 @@ module LANSAC #(
     parameter MINIMUM_PAIR_NUM = 6
 ) (
     input logic clk,
-    input logic pclk,
     input logic reset,
 
     input logic [X_WIDTH-1:0] x_pixel,
@@ -18,6 +17,9 @@ module LANSAC #(
     input logic [Y_WIDTH-1:0] prev_feature_Y,
     input logic pair_valid,
     input logic pair_done,
+
+    //input logic [GRAY_DATA_SIZE-1:0] gray_input,
+
     output logic signed [17:0] affine_matrix_dx,  // ±1024×DX_THRES
     output logic signed [17:0] affine_matrix_dy,  // ±1024×DY_THRES
     output logic lansac_done
@@ -137,7 +139,6 @@ module LANSAC #(
         current_feature_Y_reg_AFF_next = current_feature_Y_reg_AFF_reg;
         prev_feature_X_reg_AFF_next = prev_feature_X_reg_AFF_reg;
         prev_feature_Y_reg_AFF_next = prev_feature_Y_reg_AFF_reg;
-        feature_windex_delayed_next = feature_windex_reg;  // 지연된 값 저장
         affine_matrix_dx_next = affine_matrix_dx_reg;
         affine_matrix_dy_next = affine_matrix_dy_reg;
         random_number_next = random_number_reg;
@@ -156,15 +157,15 @@ module LANSAC #(
                 end
             end
             COMPUTE_RANDOM: begin
-                random_number_in_range_next[0] =  random_number_reg[0] % feature_windex_reg;
-                random_number_in_range_next[1] =  random_number_reg[1] % feature_windex_reg;
-                random_number_in_range_next[2] =  random_number_reg[2] % feature_windex_reg;
-                if (counter_reg == 15) begin
+                if (counter_reg == 1) begin
                     counter_next = 0;
                     state_next = COMPUTE_TRANSLATION;
-                    feature_rindex_next = random_number_in_range_next[0];
+                    feature_rindex_next = random_number_in_range_reg[0];
                 end else begin
                     counter_next = counter_reg + 1;
+                    random_number_in_range_next[0] =  random_number_reg[0] % feature_windex_reg;
+                    random_number_in_range_next[1] =  random_number_reg[1] % feature_windex_reg;
+                    random_number_in_range_next[2] =  random_number_reg[2] % feature_windex_reg;
                 end
                 if (x_pixel == 0 && y_pixel == 0) begin
                     feature_windex_next = 0;
@@ -189,7 +190,7 @@ module LANSAC #(
                     feature_rindex_next = 0;
                     state_next = DELAY;
                 end else begin
-                    feature_rindex_next = random_number_in_range_next[counter_reg+1]; 
+                    feature_rindex_next = random_number_in_range_reg[counter_reg+1]; 
                     counter_next = counter_reg + 1;
                 end
                 if (x_pixel == 0 && y_pixel == 0) begin
@@ -205,23 +206,18 @@ module LANSAC #(
                 end
             end
             DELAY: begin
-                    affine_matrix_dx_next =( (
-                        ($signed(current_feature_X_reg_AFF_reg[0]) - $signed(prev_feature_X_reg_AFF_reg[0])) +
-                        ($signed(current_feature_X_reg_AFF_reg[1]) - $signed(prev_feature_X_reg_AFF_reg[1])) +
-                        ($signed(current_feature_X_reg_AFF_reg[2]) - $signed(prev_feature_X_reg_AFF_reg[2]))
-                    )<<<10) / 3;  // ±1024×DX_THRES 스케일링
-                    affine_matrix_dy_next = ((
-                        ($signed(current_feature_Y_reg_AFF_reg[0]) - $signed(prev_feature_Y_reg_AFF_reg[0])) +
-                        ($signed(current_feature_Y_reg_AFF_reg[1]) - $signed(prev_feature_Y_reg_AFF_reg[1])) +
-                        ($signed(current_feature_Y_reg_AFF_reg[2]) - $signed(prev_feature_Y_reg_AFF_reg[2]))
-                    )<<<10) / 3;  // ±1024×DY_THRES 스케일링
-                if (counter_reg == 15) begin
-                    counter_next = 0;
-                    state_next = COMPUTE_PENALTY;
-                    
-                end else begin
-                    counter_next = counter_reg + 1;
-                end
+                affine_matrix_dx_next =( (
+                    ($signed({8'b0,current_feature_X_reg_AFF_reg[0]}) - $signed({8'b0,prev_feature_X_reg_AFF_reg[0]})) +
+                    ($signed({8'b0,current_feature_X_reg_AFF_reg[1]}) - $signed({8'b0,prev_feature_X_reg_AFF_reg[1]})) +
+                    ($signed({8'b0,current_feature_X_reg_AFF_reg[2]}) - $signed({8'b0,prev_feature_X_reg_AFF_reg[2]}))
+                )<<<10) / 3;  // ±1024×DX_THRES 스케일링
+                affine_matrix_dy_next = ((
+                    ($signed({8'b0,current_feature_Y_reg_AFF_reg[0]}) - $signed({8'b0,prev_feature_Y_reg_AFF_reg[0]})) +
+                    ($signed({8'b0,current_feature_Y_reg_AFF_reg[1]}) - $signed({8'b0,prev_feature_Y_reg_AFF_reg[1]})) +
+                    ($signed({8'b0,current_feature_Y_reg_AFF_reg[2]}) - $signed({8'b0,prev_feature_Y_reg_AFF_reg[2]}))
+                )<<<10) / 3;  // ±1024×DY_THRES 스케일링
+                state_next = COMPUTE_PENALTY;
+                feature_rindex_next = 0;
                 if (x_pixel == 0 && y_pixel == 0) begin
                     feature_windex_next = 0;
                     feature_rindex_next = 0;
@@ -235,8 +231,8 @@ module LANSAC #(
                 end
             end
             COMPUTE_PENALTY: begin
-                diff_x =$signed(current_feature_X_reg<<<10) - ( $signed(prev_feature_X_reg<<<10) + affine_matrix_dx_reg );
-                diff_y =$signed(current_feature_Y_reg<<<10) - ( $signed(prev_feature_Y_reg<<<10) + affine_matrix_dy_reg );
+                diff_x = $signed({14'd0, current_feature_X_reg} <<< 10) - ( $signed({14'd0, prev_feature_X_reg} <<< 10) + affine_matrix_dx_reg );
+                diff_y = $signed({14'b0, current_feature_Y_reg}  <<<10) - ( $signed({14'b0,prev_feature_Y_reg}<<<10) + affine_matrix_dy_reg );
                 diff_next = diff_reg + ((diff_x < 0) ? -diff_x : diff_x) + ((diff_y < 0) ? -diff_y : diff_y);
                 if (feature_rindex_reg == feature_windex_reg - 1) begin
                     feature_rindex_next = 0;
@@ -293,19 +289,19 @@ module LANSAC #(
     end
 
     pseudo_random0 U_pseudo_random0 (
-        .clk(pclk),
+        .clk(clk),
         .rst(reset),
         .en (en),
         .q  (random_number[0])
     );
     pseudo_random1 U_pseudo_random1 (
-        .clk(pclk),
+        .clk(clk),
         .rst(reset),
         .en (en),
         .q  (random_number[1])
     );
     pseudo_random2 U_pseudo_random2 (
-        .clk(pclk),
+        .clk(clk),
         .rst(reset),
         .en (en),
         .q  (random_number[2])
