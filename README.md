@@ -1,6 +1,6 @@
 # harman_final Project
 
-![썸네일 이미지나 로고](https://github.com/Sngho12/harman_final/blob/main/image/oriraccoon2.jpeg)
+![썸네일 이미지나 로고](https://github.com/Sngho12/harman_final/blob/main/image/oriraccoon1.png)
 
 귀여운 오리너구리가 우리의 팀명이에요
 
