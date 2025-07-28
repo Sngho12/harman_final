@@ -158,9 +158,9 @@ module NMS #(
                     comp_valid[23] = data_44[1];
                 end
 
-                // 비교: 유효한 주변 중 하나라도 점수가 더 크거나 같으면 탈락
+                // 비교: 유효한 주변 중 하나라도 점수가 더 크면 탈락
                 for (int i = 0; i < 24; i++) begin
-                    if (comp_valid[i] && center_score <= comp_score[i]) begin
+                    if (comp_valid[i] && center_score < comp_score[i]) begin
                         corner_detected = 0;
                     end
                 end

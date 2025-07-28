@@ -218,7 +218,7 @@ module Hamming_Processor #(
         next_no_storage = no_storage;
         next_index_count = index_count;
         next_prev_cornerX = prev_cornerX;
-        lowest_fmatching_weight_next = lowest_fmatching_weight_reg;
+
         // State MATCHING
         current_f = 0;
         current_b = 0;
@@ -249,6 +249,7 @@ module Hamming_Processor #(
         next_backward_stop = backward_stop;
         next_forward_matching_reg = forward_matching_reg;
         next_backward_matching_reg = backward_matching_reg;
+
         local_forward_matching_reg.match_addr = '0;
         local_forward_matching_reg.weight = MAX_WEIGHT + 1;
         local_backward_matching_reg.match_addr = '0;
@@ -273,12 +274,10 @@ module Hamming_Processor #(
                 next_prev_cornerX = cornerX;             
                 if ((prev_cornerX != cornerX) && (no_storage == 0)) begin
                     LUT_current_reg_wen = 1;
-                    if (index_count == RAM_SIZE - 1) begin
-                        next_no_storage = 1;
-                    end
-                    else begin
-                        next_index_count = index_count + 1;
-                    end
+                    next_index_count = index_count + 1;
+                end
+                if (index_count == RAM_SIZE - 1) begin
+                    next_no_storage = 1;
                 end
 
                 if (x_coor == HORIZEN - 2 && y_coor == VERTICAL - 1) begin
@@ -316,10 +315,10 @@ module Hamming_Processor #(
                 end else begin
                     prev_single_read_addr_next = prev_single_read_addr +1;
                     fmatching_weight = count_ones(current_wire.desc_reg ^ prev_wire.desc_reg);
-                    fx_diff = (current_wire.x_reg < prev_wire.x_reg) ? prev_wire.x_reg - current_wire.x_reg : current_wire.x_reg - prev_wire.x_reg;
-                    fy_diff = (current_wire.y_reg < prev_wire.y_reg) ? prev_wire.y_reg - current_wire.y_reg : current_wire.y_reg - prev_wire.y_reg;
+                    fx_diff = ($signed({1'b0,current_wire.x_reg}) < $signed({1'b0,prev_wire.x_reg})) ? prev_wire.x_reg - current_wire.x_reg : current_wire.x_reg - prev_wire.x_reg;
+                    fy_diff = ($signed({1'b0,current_wire.y_reg}) < $signed({1'b0,prev_wire.y_reg}))? prev_wire.y_reg - current_wire.y_reg : current_wire.y_reg - prev_wire.y_reg;
                     if ((fx_diff < MATCH_LIMIT_X) && (fy_diff < MATCH_LIMIT_Y)) begin
-                        if( fmatching_weight <= lowest_fmatching_weight_reg) begin
+                        if( fmatching_weight < lowest_fmatching_weight_reg) begin
                             lowest_fmatching_weight_next = fmatching_weight;
                             next_current_feature_X = current_wire.x_reg;
                             next_current_feature_Y = current_wire.y_reg;
@@ -342,9 +341,9 @@ module Hamming_Processor #(
                 if (prev_index_count < index_count) begin
                     next_prev_index_count = prev_index_count + 1;
                     next_storage_count = storage_count + 1;
-                    
                 end
                 else begin
+                    prev_ram_wen = 0;
                     next_state = IDLE;
                     next_index_count = 0;
                     next_storage_count = 0;
