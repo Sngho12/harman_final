@@ -1,6 +1,6 @@
 # harman_final Project
 
-![썸네일 이미지나 로고](https://github.com/Sngho12/harman_final/blob/main/image/oriraccoon1.png)
+![썸네일 이미지나 로고](https://github.com/Sngho12/harman_final/blob/main/image/oriraccoon2.jpeg)
 
 ## 프로젝트 명
 FPGA 기반 실시간 악천후 보정 영상처리 시스템
